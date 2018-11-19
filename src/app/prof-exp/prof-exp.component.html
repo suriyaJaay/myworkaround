@@ -1,0 +1,54 @@
+<div class ="container-fluid" *ngFor ="let e of exp">
+  <ul class="cbp_tmtimeline">
+	<li>
+		<time class="cbp_tmtime" ><!--<span>4/10/13</span>--> <span>{{e.exp_comp3FrmMn}},{{e.exp_comp3FrmYr}}</span>
+		- <span>{{e.exp_comp3ToMn}}</span>
+		</time>
+		<div class="cbp_tmicon "></div>
+		<div class="cbp_tmlabel">
+			<h4>{{e.exp_comp3Desig}}-{{e.exp_comp3Role}} @ {{e.exp_comp3Name}}, {{e.exp_comp3Loc}} - {{e.exp_comp3country}}</h4>
+			<p>Seems like the latest angular cli (v6) is not passing the base-href to the postcss, making postcss mess up the paths.
+
+I can't prefix my urls with / or with ../ since both will mess up the path. The path needs to be relative since i have a base-href for my solution. The angular CLI already reads the base-href and uses it for parsing assets, everywhere except passing it to postcss.
+
+Any paths inside .scss files will eventually work once the solution hits production, but in non prod builds, postcss will output errors/warnings since it does not know about the base-href</p>
+		</div>
+	</li>
+	<li>
+		<time class="cbp_tmtime" ><span>{{e.exp_comp2FrmMn}},{{e.exp_comp2FrmYr}}</span>
+		- <span>{{e.exp_comp2T0Mn}},{{e.exp_comp2EndYr}}</span></time>
+		<div class="cbp_tmicon "></div>
+		<div class="cbp_tmlabel">
+			<h4>{{e.exp_comp2Role}} @ {{e.exp_comp2Name}}, {{e.exp_comp2Loc}} - {{e.exp_comp2country}}</h4>
+			<p>Caulie dandelion maize...</p>
+		</div>
+	</li>
+	<li>
+		<time class="cbp_tmtime" ><span>{{e.exp_comp1FrmMn}},{{e.exp_comp1FrmYr}}</span>
+		- <span>{{e.exp_comp1EdMn}},{{e.exp_comp1EndYr}}</span></time>
+		<div class="cbp_tmicon "></div>
+		<div class="cbp_tmlabel">
+			<h4>{{e.exp_comp1RoleAndDesig}} @ {{e.exp_comp1Name}}, {{e.exp_comp1Loc}} - {{e.exp_comp1country}}</h4>
+			<p>Parsnip lotus root...</p>
+		</div>
+	</li>
+<!--	<li>
+		<time class="cbp_tmtime" datetime="2013-04-15 13:15"><span>4/15/13</span> <span>13:15</span></time>
+		<div class="cbp_tmicon "></div>
+		<div class="cbp_tmlabel">
+			<h2>Watercress ricebean</h2>
+			<p>Peanut gourd nori...</p>
+		</div>
+	</li>
+	<!--<li>
+		<time class="cbp_tmtime" datetime="2013-04-16 21:30"><span>4/16/13</span> <span>21:30</span></time>
+		<div class="cbp_tmicon "></div>
+		<div class="cbp_tmlabel">
+			<h2>Courgette daikon</h2>
+			<p>Parsley amaranth tigernut...</p>
+		</div>
+	</li>-->
+</ul>
+</div>
+
+<br><br><br>
